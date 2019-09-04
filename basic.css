@@ -1,0 +1,41 @@
+body {
+    width: 960px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-bar {
+    position: relative;
+    background: #131d29;
+    padding: 0 10px;
+    font-size: 12px
+}
+
+.top-bar a {
+    color: rgb(124, 124, 124);
+    line-height: 2;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.top-bar nav{
+    position: absolute;
+    top: 0; right: 10px;
+}
+
+.top-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar li {
+    display: inline;
+    margin-left: 5px;
+    padding-left: 5px;
+    border-left: 1px solid #7c7c7c;
+}
+
+.top-bar li:first-child {
+    border: none;
+}

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage - Basic HTML &amp; CSS Test</title>
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/960.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background: #f2f4f4;
+            color: #888;
+        }
+        .top-bar {
+            background: #131d29;
+            color: #aaa;
+            padding: 8px 0;
+            text-transform: uppercase;
+            font-size: 10px;
+        }
+        .top-bar a {
+            color: #aaa;
+            text-decoration: none;
+        }
+        .corporate-menu ul {
+            margin: 0;
+            padding: 0;
+            text-align: right;
+            list-style: none;
+        }
+        
+        .corporate-menu li {
+            padding-left: 5px;
+            display: inline;
+            border-left: 1px solid #aaa;
+        }
+
+        .corporate-menu li.first {
+            border: none;
+        }
+
+        .corporate-menu a {
+            padding: 0 3px;
+        }
+
+        .main-menu {
+            margin-top: 45px;
+        }
+
+        .main-menu ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: right;
+        }
+
+        .main-menu li {
+            display: inline;
+        }
+
+        .main-menu a {
+            text-decoration: none;
+            text-transform: uppercase;
+            background: #131d29;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-family: 'Fjalla One';
+        }
+
+        .main-menu a:hover {
+            background: #f88f00;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+        }
+
+        .indicators {
+            list-style: none;
+            margin: 15px 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .indicators li {
+            display: inline;
+        }
+
+        .indicators a {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #ccc;
+        }
+
+        .indicators a:hover {
+            background: #f88f00;
+        }
+
+        .main h2 {
+            margin: 40px 0;
+            text-transform: uppercase;
+            font-family: 'Fjalla One';
+            font-size: 56px;
+            color: #131d29;
+        }
+
+        .main img {
+            width: 100%;
+            height: auto;
+        }
+
+        .grid--inner {
+            padding-right: 20px;
+        }
+
+        .colophon {
+            padding-bottom: 30px;
+            margin-top: 60px;
+            background: linear-gradient(to bottom,  #304e70 0%,#111924 100%);
+            background: radial-gradient(ellipse at top, #304e70 0%,#111924 100%);
+            color: #fefefe;
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+        .colophon h2 {
+            margin-top: 60px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            font-family: 'Fjalla One';
+            font-size: 36px;
+        }
+
+        .colophon ul {
+            padding-left: 16px; 
+        }
+
+        .colophon h3, .colophon p {
+            margin: 0;
+            font-weight:500;
+        }
+
+        .colophon p {
+            color: #4e5f73;
+        }
+
+        .colophon a, .copyright a {
+            text-decoration: none;
+            color: #fefefe;
+        }
+
+        .copyright {
+            font-size: 14px;
+            text-transform: uppercase;
+            padding: 20px 0 60px;
+            background: #0d141d;
+        }
+
+        .border-top {
+            border-top: 1px solid #ccc;
+        }
+
+        .border-right {
+            border-right: 1px solid #ccc;
+        }
+
+        ul.news {
+            list-style: none;
+            padding: 0;
+        }
+
+        .opportunities li, .news li {
+            margin-bottom: 25px;
+        }
+
+        .date {
+            float: left;
+            display: block;
+            margin-right: 10px;
+            width: 70px;
+            padding: 3px 0;
+            border-radius: 5px;
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            font-family: 'Fjalla One';
+            line-height: normal;
+        }
+
+        .date--one {
+            background: #be8542;
+        }
+
+        .date--two {
+            background: #bc6142;
+        }
+
+        .date--three {
+            background: #bd425e;
+        }
+
+        .day {
+            font-size: 32px;
+            display: block;
+            font-weight: bold;
+        }
+        .month {
+            font-size: 16px;
+        }
+
+
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background: #131d29;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: 'Fjalla One';
+        }
+
+        .btn--light {
+            background: #29425f;
+        }
+
+        .sr-only {
+            display: none;
+        }
+        </style>
+</head>
+<body>
+<div class="top-bar">
+    <div class="top-bar-inner container_12">
+        <div class="grid_8">
+            <a href="#" title="www.demolink.org">www.demolink.org</a>
+        </div>
+        <div class="grid_4">
+            <nav class="menu corporate-menu">
+                <h1 class="sr-only">Corporate Menu</h1>
+                <ul>
+                    <li class="first"><a href="#" title="">Support</a></li>
+                    <li><a href="#" title="">Faqs</a></li>
+                    <li><a href="#" title="">Sitemap</a></li>
+                    <li><a href="#" title="">Help</a></li>
+                </ul>            
+            </nav>
+        </div>
+    </div>
+</div>
+<header class="branding container_12">
+    <div class="grid_5">
+        <h1 class="logo"><img src="images/detroix.png" alt=""><span class="sr-only">Detroix</span></h1>
+    </div>
+    <div class="grid_7">
+        <nav class="menu main-menu">
+            <h1 class="sr-only">Main Menu</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Faqs</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>        
+        </nav>
+    </div>
+</header>
+<div class="hero container_12">
+    <div class="grid_12">
+        <img src="images/hero.jpg" alt="">
+        <ul class="indicators">
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+    </div>
+</div>
+<div class="container_12">
+    <div class="grid_4">
+        <div class="grid--inner">        
+            <h2>Smart</h2>
+            <img src="http://placehold.it/300x150" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos perferendis vel perspiciatis sed animi mollitia unde ullam, illum ad sunt porro labore, temporibus soluta.</p>
+            <a href="#" title="MORE" class="btn">MORE</a>
+        </div>
+    </div>
+    <div class="grid_4">
+        <div class="grid--inner">
+            <h2>Strong</h2>
+            <img src="http://placehold.it/300x150" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet perspiciatis expedita, fuga, blanditiis dicta quia, assumenda doloremque voluptates cumque.</p>
+            <a href="#" title="MORE" class="btn">MORE</a>
+        </div>
+    </div>
+    <div class="grid_4">
+        <div class="grid--inner">
+            <h2>Stable</h2>
+            <img src="http://placehold.it/300x150" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquam incidunt fuga, quaerat ea sed velit dolore, eos praesentium quam, officiis dicta, beatae non?</p>
+            <a href="#" title="MORE" class="btn">MORE</a>
+        </div>
+    </div>
+</div>
+<footer class="colophon">
+    <div class="colophon-inner container_12">
+        <div class="grid_4">
+            <h2>Services</h2>
+            <ul class="services">
+                <li><h3><a href="#">Lorem ipsum dolor sit amet.</a></h3></li>
+                <li><h3><a href="#">Lorem ipsum dolor sit amet.</a></h3></li>
+                <li><h3><a href="#">Lorem ipsum dolor sit amet.</a></h3></li>
+                <li><h3><a href="#">Lorem ipsum dolor sit amet.</a></h3></li>
+                <li><h3><a href="#">Lorem ipsum dolor sit amet.</a></h3></li>
+                <li><h3><a href="#">Lorem ipsum dolor sit amet.</a></h3></li>
+                <li><h3><a href="#">Lorem ipsum dolor sit amet.</a></h3></li>
+                <li><h3><a href="#">Lorem ipsum dolor sit amet.</a></h3></li>
+            </ul>
+            <a href="#" title="MORE" class="btn btn--light">MORE</a>
+        </div>
+        <div class="grid_4">
+            <h2>Opportunities</h2>
+            <ul class="opportunities">
+                <li>
+                    <h3><a href="#">Lorem ipsum dolor sit.</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum deserunt dolore nobis alias ducimus porro voluptas, suscipit possimus!</p>
+                </li>
+                <li>
+                    <h3><a href="#">Lorem ipsum dolor sit.</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos exercitationem molestias aperiam ipsa quo officiis blanditiis rem ducimus?</p>
+                </li>                
+            </ul>
+            <a href="#" title="MORE" class="btn btn--light">MORE</a>
+        </div>
+        <div class="grid_4">
+            <h2>News</h2>
+            <ul class="news">
+                <li class="clearfix">
+                    <span class="date date--one">
+                        <span class="day">09</span>
+                        <span class="month">Nov</span>
+                    </span>
+                    <h3><a href="#">Lorem ipsum dolor sit.</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </li>
+                <li class="clearfix">
+                    <span class="date date--two">
+                        <span class="day">17</span>
+                        <span class="month">Nov</span>
+                    </span>
+                    <h3><a href="#">Lorem ipsum dolor sit.</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit.</p>
+                </li>
+                <li class="clearfix">
+                    <span class="date date--three">
+                        <span class="day">21</span>
+                        <span class="month">Nov</span>
+                    </span>
+                    <h3><a href="#">Lorem ipsum dolor sit.</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </li>                                
+            </ul>
+            <a href="#" title="MORE" class="btn btn--light">MORE</a>
+        </div>
+    </div>
+</footer>
+<div class="copyright">
+    <div class="copyright-inner container_12">
+        Detroix &copy; 2012 &bull; <a href="#">Privacy Policy</a>.
+    </div>
+</div>
+</body>
+</html>
